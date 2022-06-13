@@ -1,0 +1,50 @@
+.advice--footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.advice--footer-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: -2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--advice-light-cyan);
+}
+.advice--footer-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0 20px 10px var(--advice-neon-green);
+}
+.advice--footer-separator {
+  background-image: url(../../../images/pattern-divider-mobile.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 85%;
+  height: 1.25rem;
+}
+.advice--footer-dice {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../../../images/icon-dice.svg);
+}
+
+@media (min-width: 769px) {
+  .advice--footer-separator {
+    background-image: url(../../../images/pattern-divider-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 85%;
+    height: 0.75rem;
+  }
+}

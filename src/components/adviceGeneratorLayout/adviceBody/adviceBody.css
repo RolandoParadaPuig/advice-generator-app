@@ -1,0 +1,8 @@
+.advice--body {
+  color: var(--advice-light-cyan);
+  font-size: 1.75rem;
+}
+.advice--body-text {
+  text-align: center;
+  padding: 0 1rem;
+}
