@@ -19,10 +19,16 @@
   border-radius: 50%;
   border: none;
   background-color: var(--advice-light-cyan);
+
+  background-image: url(../../../images/icon-dice.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 150ms ease-out;
 }
 .advice--footer-button:hover {
   cursor: pointer;
   box-shadow: 0 0 20px 10px var(--advice-neon-green);
+  transform: scale(1.125);
 }
 .advice--footer-separator {
   background-image: url(../../../images/pattern-divider-mobile.svg);
@@ -31,11 +37,6 @@
   background-size: cover;
   width: 85%;
   height: 1.25rem;
-}
-.advice--footer-dice {
-  width: 1.5rem;
-  height: 1.5rem;
-  background-image: url(../../../images/icon-dice.svg);
 }
 
 @media (min-width: 769px) {
