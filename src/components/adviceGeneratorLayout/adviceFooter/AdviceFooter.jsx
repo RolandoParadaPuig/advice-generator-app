@@ -26,7 +26,9 @@ export const AdviceFooter = (props) => {
         disabled={btnDisabled}
         onClick={randomClick}
         className={"advice--footer-button"}
-      ></button>
+      >
+        generate
+      </button>
     </footer>
   );
 };

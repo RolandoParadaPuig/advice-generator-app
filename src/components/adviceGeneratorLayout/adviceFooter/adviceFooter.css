@@ -19,7 +19,7 @@
   border-radius: 50%;
   border: none;
   background-color: var(--advice-light-cyan);
-
+  font-size: 0;
   background-image: url(../../../images/icon-dice.svg);
   background-position: center;
   background-repeat: no-repeat;
