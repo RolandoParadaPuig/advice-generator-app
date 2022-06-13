@@ -12,8 +12,6 @@ export const AdviceLayout = () => {
       const url = "https://api.adviceslip.com/advice";
       const res = await fetch(url);
       const data = await res.json();
-      console.log(data.slip.id);
-      console.log(data.slip.advice);
       setAdvice(data.slip.advice);
       setAdviceNumber(data.slip.id);
     } catch (err) {

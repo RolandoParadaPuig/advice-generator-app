@@ -19,7 +19,7 @@
 }
 .advice--layout-loading {
   font-size: 2rem;
-  padding: 1rem 0;
+  margin: 1rem 0;
   color: var(--advice-neon-green);
   animation-name: layoutLoading;
   animation-duration: 2s;
