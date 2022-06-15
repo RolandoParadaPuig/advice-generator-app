@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineLoading } from "react-icons/ai";
 import { AdviceBody } from "../adviceBody/AdviceBody";
 import { AdviceFooter } from "../adviceFooter/AdviceFooter";
@@ -18,6 +18,7 @@ export const AdviceLayout = () => {
       console.log(err);
     }
   })();
+  useEffect(() => {}, [advice, adviceNumber]);
   return (
     <div className={"advice--layout"}>
       <div className="advice--layout-body">
