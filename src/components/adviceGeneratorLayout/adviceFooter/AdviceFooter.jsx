@@ -15,7 +15,6 @@ export const AdviceFooter = (props) => {
       const data = await res.json();
       if (adviceNumber == data.slip.id) {
         randomClick();
-        console.log(data.slip.advice);
       } else {
         setAdvice(data.slip.advice);
         setAdviceNumber(data.slip.id);
