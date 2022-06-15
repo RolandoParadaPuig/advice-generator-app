@@ -4,6 +4,8 @@ export const AdviceFooter = (props) => {
   const [btnDisabled, setBtnDisabled] = useState(false);
   const setAdvice = props.setAdvice;
   const setAdviceNumber = props.setAdviceNumber;
+  const advice = props.advice;
+  const adviceNumber = props.adviceNumber;
   const randomClick = async () => {
     setBtnDisabled(true);
     setAdvice("");
@@ -11,16 +13,20 @@ export const AdviceFooter = (props) => {
       const url = "https://api.adviceslip.com/advice";
       const res = await fetch(url);
       const data = await res.json();
-      setAdvice(data.slip.advice);
-      setAdviceNumber(data.slip.id);
-      setBtnDisabled(false);
-      console.log(data.slip.advice);
+      if (adviceNumber == data.slip.id) {
+        randomClick();
+        console.log(data.slip.advice);
+      } else {
+        setAdvice(data.slip.advice);
+        setAdviceNumber(data.slip.id);
+        setBtnDisabled(false);
+      }
     } catch (err) {
       console.log(err);
       setBtnDisabled(false);
     }
   };
-  useEffect(() => {}, [btnDisabled, setAdvice, setAdviceNumber]);
+  useEffect(() => {}, []);
   return (
     <footer className={"advice--footer"}>
       <div className={"advice--footer-separator"}></div>

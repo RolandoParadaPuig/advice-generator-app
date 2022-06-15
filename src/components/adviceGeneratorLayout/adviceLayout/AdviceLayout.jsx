@@ -7,7 +7,8 @@ import "./adviceLayout.css";
 export const AdviceLayout = () => {
   const [advice, setAdvice] = useState("");
   const [adviceNumber, setAdviceNumber] = useState(0);
-  (async () => {
+
+  const firstLoad = async () => {
     try {
       const url = "https://api.adviceslip.com/advice";
       const res = await fetch(url);
@@ -17,8 +18,10 @@ export const AdviceLayout = () => {
     } catch (err) {
       console.log(err);
     }
-  })();
-  useEffect(() => {}, [advice, adviceNumber]);
+  };
+  useEffect(() => {
+    firstLoad();
+  }, []);
   return (
     <div className={"advice--layout"}>
       <div className="advice--layout-body">
@@ -28,7 +31,12 @@ export const AdviceLayout = () => {
         ) : (
           <AiOutlineLoading className={"advice--layout-loading"} />
         )}
-        <AdviceFooter setAdvice={setAdvice} setAdviceNumber={setAdviceNumber} />
+        <AdviceFooter
+          setAdvice={setAdvice}
+          setAdviceNumber={setAdviceNumber}
+          advice={advice}
+          adviceNumber={adviceNumber}
+        />
       </div>
     </div>
   );
